@@ -1,10 +1,10 @@
 
-variable "fronttier_machine_count" {
-	description = "Machine count of fronttier ASG "
+variable "asg_number_of_instance" {
+	description = "Number if ASG Instances"
 	default=1
 }
 
-variable "asg_max_count" {
+variable "asg_max_number_of_instance" {
 	description = "Max Number of ASG Instances"
 	default=1
 }
