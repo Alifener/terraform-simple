@@ -1,35 +1,35 @@
 
-variable "FRONTTIER_MACHINE_COUNT" {
+variable "fronttier_machine_count" {
 	description = "Machine count of fronttier ASG "
 	default=1
 }
 
-variable "FRONTTIER_MACHINE_COUNT_MAX" {
-	description = "Maximum machine count of fronttier ASG"
+variable "asg_max_count" {
+	description = "Max Number of ASG Instances"
 	default=1
 }
 
-variable "DB_CLUSTER_MACHINE_COUNT" {
-	description = "Aurora RDS cluster machine count"
+variable "db_cluster_instance_count" {
+	description = "Number of Aurora RDS cluster instances"
 	default     = 1
 }
 
-variable "FRONTTIER__MACHINE_TYPE" {
-	description ="The EC2 instance machine types which will be used in front tier"
+variable "public_subnet_instance_type" {
+	description ="Frontend EC2 instance type"
 	default     = "t2.micro"
 }
 
-variable "DB_MACHINE_TYPE" {
-	description = "Aurora db database machine types"
+variable "db_instance_type" {
+	description = "Aurora db database instance types"
 	default     = "db.t2.small"
 }
 
-variable "AWS_REGION" {
+variable "aws_region" {
   description = "The AWS regions name which machine will be installed in"
   default = "eu-west-2"
 }
 
-variable "AMIS" {
+variable "amis" {
 	type="map"
 	default = {
 		eu-west-2 = "ami-e7d6c983",
@@ -37,30 +37,30 @@ variable "AMIS" {
 	}
 }
 
-variable "RDS_DB_NAME" {
+variable "rds_db_name" {
 	description = "Aurora RDS database name"
 	default = "universal"
 }
 
-variable "RDS_USERNAME" {
+variable "rds_username" {
 	description = "Aurora RDS database username"
 	default 	= "root"
 }
 
-variable "RDS_PASSWORD" { 
+variable "rds_password" { 
 	description = "Aurora RDS database root password"
 	default = "universal123"
 }
 
-variable "PATH_TO_PRIVATE_KEY" {
+variable "path_to_private_key" {
   default = "../keys/universalkey"
 }
 
-variable "PATH_TO_PUBLIC_KEY" {
+variable "path_to_public_key" {
   default = "../keys/universalkey.pub"
 }
 
-variable "INSTANCE_USERNAME" {
+variable "instance_username" {
   default = "ec2-user"
 }
 
